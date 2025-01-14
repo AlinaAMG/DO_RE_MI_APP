@@ -1,0 +1,110 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("piano.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-weight: 500;
+    height:100vh;
+    
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: "Quicksand", monospace;
+    color:rgb(235, 11, 197);
+    font-weight: bolder;
+    font-size:1.5rem;
+    text-align: center;
+   
+    margin-top:10px;
+    text-shadow:2px 5px 5px rgb(255,255,255), 1px 1px 0px rgb(255,255,255);
+}
+
+.keys {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   
+    height:300px;
+    width:50%;
+    overflow:hidden;
+    background: rgba(255,255,255,0.3);
+    border-top:2px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(2px);
+    box-shadow: 20px 20px 50px rgb(0,0,0);
+    border-radius:15px;
+    margin-top:10px;
+}
+
+ button {
+   padding:15px;
+   font-size: 1.1rem;
+   height:150px;
+   margin:2px;
+   cursor:pointer;
+  
+}
+
+ button:nth-of-type(even){
+    background-color: black;
+    color:white;
+ }
+
+ button:focus{
+    outline:none
+ }
+
+ button:active{
+    transform:scale(0.95);
+    box-shadow:0px 0px 5px 6px green;
+ }
+
+ button.activated{
+    box-shadow:0px 0px 5px 6px  green;
+ }
+
+ .footer {
+    margin-top:100px;
+    font-weight: bolder;
+ }
+
+ .footer a:active,
+ .footer a:visited {
+    color:black;
+   
+ }
+
+ .footer a:hover {
+    color:rgba(35,245,35);
+ }
+
+
+ @media(max-width:920px) {
+    .keys {
+        width:90%;
+    }
+ }
+
+ @media(max-width:800px) {
+    .keys {
+        width:80%;
+    }
+ }
+
+ @media(max-width:600px) {
+    .keys {
+        width:100%;
+    }
+ }
+
+ 
